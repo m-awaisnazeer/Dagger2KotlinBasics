@@ -2,6 +2,7 @@ package com.example.dagger2kotlinbasics
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.dagger2kotlinbasics.di.DaggerCarComponent
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         var engine:Engine= Engine()
         var battery:Battery=Battery()
 
-        val hondaCar=Car(engine,battery)
+        val hondaCar=DaggerCarComponent.create().getCar()
 
         hondaCar.drive()
     }

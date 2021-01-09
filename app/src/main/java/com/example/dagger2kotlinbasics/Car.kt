@@ -1,6 +1,9 @@
 package com.example.dagger2kotlinbasics
 
-class Car (var engine: Engine,
+import javax.inject.Inject
+
+
+class Car @Inject constructor(var engine: Engine,
            var battery: Battery) {
 
     fun drive() {

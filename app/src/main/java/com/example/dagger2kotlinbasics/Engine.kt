@@ -1,6 +1,8 @@
 package com.example.dagger2kotlinbasics
 
-class Engine (){
+import javax.inject.Inject
+
+class Engine @Inject constructor(){
 
     fun start(){
         Utils.showTag("Engine has started")
